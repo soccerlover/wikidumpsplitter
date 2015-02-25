@@ -63,6 +63,7 @@ public class WikiDumpSplitter {
 							splitFileName = baseDir + "/" + fileBase + "-" + currentId;
 							bw = new BufferedWriter(new FileWriter(splitFileName));
 							bw.write(sb.toString());
+							accumulatedSize = 0;
 						}
 						accumulatedSize += sb.length();
 						sb.delete(0, sb.length());
